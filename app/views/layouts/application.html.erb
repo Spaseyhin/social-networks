@@ -16,12 +16,28 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    
 
+
+
+
+  <body>
     <%= render 'layouts/header' %>
+      <div class="row">
+
+      <div class="col"></div>
+
+      <div class="col-xs-10 col-md-8">
 
     <%= yield %>
+
+      </div>
+
+      <div class="col"></div> 
+    </div>
+
+
+
+
     <%= render 'layouts/footer' %>
   </body>
    <script src="hystmodal.min.js"></script>
