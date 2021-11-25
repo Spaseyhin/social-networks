@@ -3,7 +3,10 @@
 
 .center h1 {margin-bottom: 10px;}
 
-.mar{margin-top: 4%}
+.mar{
+    margin-bottom: 7%
+
+}
 
 section {overflow: auto;}
 
@@ -44,13 +47,14 @@ h2 {
     color: #777;
 }
 p {
+    margin-top: 5%;
     font-size: 1.1em;
     line-height: 1.7em;
 }
 
 footer {
 
-margin-top: 300px;
+margin-top: 30px;
 padding-top: 5px;
 border-top: 1px solid #eaeaea;
 color: #777;
