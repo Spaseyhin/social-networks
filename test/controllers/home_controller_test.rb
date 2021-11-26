@@ -14,4 +14,9 @@ end
     assert_response :success
     assert_select "title", "About | Ruby on Rails Tutorial Sample App"#проверка тегов и их наличие
   end
+  test "should get contact" do
+    get home_contact_url
+    assert_response :success
+    assert_select "title", "Contact | Ruby on Rails Tutorial Sample App"
+  end
 end
