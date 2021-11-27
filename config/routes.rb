@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/new'
   get 'article/new'
   get 'index' => 'home#index'
   get 'about' => 'home#about'
