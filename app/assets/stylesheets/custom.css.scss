@@ -4,7 +4,8 @@
 .center h1 {margin-bottom: 10px;}
 
 .mar{
-    margin-bottom: 7%
+    margin-bottom: 7%;
+    margin-top: 5%;
 
 }
 
@@ -47,7 +48,7 @@ h2 {
     color: #777;
 }
 p {
-    margin-top: 5%;
+    
     font-size: 1.1em;
     line-height: 1.7em;
 }
@@ -55,7 +56,7 @@ p {
 
 
 footer {
-    margin-top: 45px;
+    margin-top: 400px;
     padding-top: 5px;
     border-top: 1px solid #eaeaea;
     color: #777;
@@ -73,4 +74,35 @@ footer {
         margin-left: 15px;
         }
     }
+}
+
+@mixin box_sizing {
+-moz-box-sizing:
+border-box;
+-webkit-box-sizing: border-box;
+box-sizing:
+border-box;
+}
+/* разное */
+.debug_dump {
+clear: both;
+float: left;
+width: 100%;
+margin-top: 45px;
+@include box_sizing;
+}
+
+/* разное */
+.debug_dump {
+clear: both;
+float: left;
+width: 100%;
+margin-top: 45px;
+@include box_sizing;
+}
+
+
+.input_new_pos {
+    margin-top: 2%;
+    width: 300px;
 }
