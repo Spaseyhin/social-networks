@@ -108,3 +108,8 @@ margin-top: 45px;
     margin-top: 2%;
     width: 300px;
 }
+
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
