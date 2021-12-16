@@ -7,13 +7,15 @@
 			<p>This will be a signup page for new users.</p>
 			<%= form_for(@user) do |f| %>
 
-			<%= f.text_field :name, placeholder: "Name", class: "form-control input_new_pos"%>
+			<%= render 'shared/error_messages' %>
+
+			<%= f.text_field :name, placeholder: "Name", class: "form-control input_new_pos "%>
 
 
 			<%= f.text_field :email, placeholder: "Email", class: "form-control input_new_pos " %>
 
 
-			<%= f.text_field :password, placeholder: "Password", class: "form-control input_new_pos"%>
+			<%= f.password_field :password, placeholder: "Password", class: "form-control input_new_pos"%>
 
 
 			<%= f.password_field :password_confirmation, placeholder: "Password confirmation", class: "form-control input_new_pos"%>
