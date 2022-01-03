@@ -3,8 +3,8 @@
 <div class = "row">
 	<div class="col-xs-8 ">
 		<center>
-			<h1 class="top">Sign up</h1>
-
+			<h1>Sign up</h1>
+			<p>This will be a signup page for new users.</p>
 			<%= form_for(@user) do |f| %>
 
 			<%= render 'shared/error_messages' %>
@@ -21,7 +21,6 @@
 			<%= f.password_field :password_confirmation, placeholder: "Password confirmation", class: "form-control input_new_pos"%>
 
 			<%= f.submit "Create my account", class: "btn btn-primary input_new_pos"%>
-			
 			<% end %>
 		</center>
 	</div>
