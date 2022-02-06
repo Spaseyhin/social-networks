@@ -17,6 +17,7 @@ module SessionsHelper
     if (user_id = session[:user_id])
       @current_user ||= User.find_by(id: user_id)
     elsif (user_id = cookies.signed[:user_id])
+      #raise # Если тест выполнится успешно, значит, эта ветвь не охвачена тестированием.
       user = User.find_by(id: user_id)
       if user && user.authenticated?( cookies[:remember_token])
         log_in user 
@@ -30,17 +31,21 @@ module SessionsHelper
     !current_user.nil?
   end
 
-# Закрывает постоянный сеанс.
-def forget(user)
-user.forget
-cookies.delete(:user_id)
-cookies.delete(:remember_token)
-end
-# Осуществляет выход текущего пользователя.
-def log_out
-forget(current_user)
-session.delete(:user_id)
-@current_user = nil
-end
+  def log_out
+    session.delete(:user_id)
+    @current_user = nil
+  end
+
+  def forget(user)
+    user.forget
+    cookies.delete(:user_id)
+    cookies.delete(:remember_token)
+  end
+  # Осуществляет выход текущего пользователя.
+  def log_out
+    forget(current_user)
+    session.delete(:user_id)
+    @current_user = nil
+  end
 
 end

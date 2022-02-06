@@ -10,6 +10,12 @@
 			<%= f.email_field :email , placeholder: "Name", class: "form-control input_new_pos "%>
 
 			<%= f.password_field :password, placeholder: "Password", class: "form-control input_new_pos"%>
+			<%= f.label :remember_me, class: "checkbox inline" do %>
+			<%= f.check_box :remember_me %>
+			<span>Remember me on this computer</span>
+			<% end %>
+			<br/>
+
 
 			<%= f.submit "To come in", class: "btn btn-primary input_new_pos"%>
 
