@@ -5,18 +5,18 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   def setup
     @user = users(:evgeniy)
   end
-  #don't work=(
-  #test "login with remembering" do
-  #log_in_as(@user, remember_me: '1')
-  #assert_not_nil cookies['remember_token']
-  #end
+  # don't work=(
+  # test "login with remembering" do
+  # log_in_as(@user, remember_me: '1')
+  # assert_not_nil cookies['remember_token']
+  # end
 
-  #test "login without remembering" do
-  #log_in_as(@user, remember_me: '0')
-  #assert_nil cookies['remember_token']
-  #end
+  # test "login without remembering" do
+  # log_in_as(@user, remember_me: '0')
+  # assert_nil cookies['remember_token']
+  # end
 
-    test 'login with valid information' do
+  test 'login with valid information' do
     get login_path
     post login_path, params: { session: { email: @user.email, password: 'password' } }
     assert_redirected_to @user
