@@ -1,10 +1,13 @@
   <header class="d-flex justify-content-center py-3">
       <ul class="nav nav-pills">
 
-        <h5><li><%= link_to "Simple app ", root_path, id: "logo", class: 'nav-link px-2 ' %></li></h5> 
+        <h5>
+          <li></li>
+          <li>
+<%= link_to "Simple app ", root_path, id: "logo", class: 'nav-link px-2 ' %></li></h5> 
 
-        <li class="nav-item"><%= link_to "Contact", contact_path, class: 'nav-link' %></li>
-        <li class="nav-item"><%= link_to "About", about_path, class: 'nav-link' %></li>
+        <li class="nav-item "><%= link_to "Contact", contact_path, class: 'nav-link fs' %></li>
+        
 
         <% if logged_in? %>
         <%= link_to "Profile", current_user, class: 'nav-link'%>
@@ -15,8 +18,7 @@
             
           </a>
           <ul class="dropdown-menu dropdown-menu " aria-labelledby="navbarDarkDropdownMenuLink">
-            <li><%= link_to "Edit profile", current_user, class: 'nav-link'%></li>
-            <li><%= link_to "Settings", edit_user_path(current_user), class: 'nav-link' %></li>
+            <li><%= link_to "Edit profile", edit_user_path(current_user), class: 'nav-link' %></li>
             <li><%= link_to "Log out", logout_path, method: "delete", class: 'nav-link'%></li>
             
           </ul>

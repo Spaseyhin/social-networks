@@ -3,7 +3,6 @@
 Rails.application.routes.draw do
   get 'user/new'
   get 'users/new'
-  get 'users/edit'
   get 'article/new'
   get 'index' => 'home#index'
   get 'about' => 'home#about'
