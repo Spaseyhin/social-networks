@@ -13,7 +13,7 @@
 
                <p>Страниц: <%= resume.page %></p>
 
-                <p><%= link_to "Download Resume", resume.attachment_url, class: "btn btn-warning"%></p>
+                <p><%= link_to "Download ", resume.attachment_url, class: "btn btn-warning"%></p>
                <%= button_to "Delete",  resume, method: :delete, class: "btn btn-warning", confirm: "Are you sure that you wish to delete #{resume.name}?" %>
 
             </div>
