@@ -163,3 +163,38 @@ background-color: green;
 .dropdown.active, .dropdown-item:active {
 background-color: green;
 }
+.portfolio ul,
+.portfolio li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.portfolio li {
+    display: inline-block;
+    position: relative;
+    width: 250px;
+}
+.img {
+    max-width: 100%;
+    display: block;
+}
+.descr{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    padding-top: 100px;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: all .25s;
+    -o-transition: all .25s;
+    transition: .25s;
+}
+
+
+
+.portfolio li:hover .descr {
+    opacity: 1;
+}

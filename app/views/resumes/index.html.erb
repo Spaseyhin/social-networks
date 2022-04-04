@@ -1,25 +1,26 @@
 
 
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-   <% @resumes.each do |resume| %>
-      <div class="col">
-         <div class="card shadow-sm">      
-            <%= image_tag(resume.image.thumb.url, alt: 'Image') if resume.image?  %>
-            <div class="card-body">
-               <h3><%= resume.name %></h3>
-               
 
-               <p class="zagolovok"><%= resume.desc%></p>
 
-               <p>Страниц: <%= resume.page %></p>
 
-                <p><%= link_to "Download ", resume.attachment_url, class: "btn btn-warning"%></p>
-               <%= button_to "Delete",  resume, method: :delete, class: "btn btn-warning", confirm: "Are you sure that you wish to delete #{resume.name}?" %>
 
-            </div>
+<div class="portfolio">
+
+   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-1">
+      <% @resumes.each do |resume| %>
+         <div class="col">
+            <ul><li><span class="descr"><h4><%= resume.name %>
+               <p>
+                  <%= link_to "Download ", resume.attachment_url, class: "btn btn-light"%>
+
+                  <%= button_to "Delete",  resume, method: :delete, class: "btn btn-light", confirm: "Are you sure that you wish to delete #{resume.name}?" %>
+                  <br/>
+            </h4>
+         </span><%= image_tag(resume.image.thumb.url, alt: 'Image', class: "img") if resume.image?  %>
+         </li></ul> 
          </div>
-            
-      </div>
-
-   <% end %>
+      <% end %>
 </div>
+
+   
+

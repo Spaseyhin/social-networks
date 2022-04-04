@@ -2,6 +2,7 @@
 
 Rails.application.routes.draw do
   get 'user/new'
+  get 'resumes/show'
   get 'users/new'
   get 'article/new'
   get 'index' => 'home#index'
@@ -14,6 +15,6 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   resources :users
  
-   resources :resumes, only: [:index, :new, :create, :destroy]
+   resources :resumes, only: [:index,  :new, :create, :destroy]
    root "resumes#index"
  end
