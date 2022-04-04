@@ -7,11 +7,12 @@
             <%= image_tag(resume.image.thumb.url, alt: 'Image') if resume.image?  %>
             <div class="card-body">
                <h3><%= resume.name %></h3>
-               <p><%= link_to "Download Resume", resume.attachment_url %></p>
+               
 
-               <p><%= resume.desc %></p>
+               <p class="zagolovok"><%= resume.desc%></p>
 
                <p>Страниц: <%= resume.page %></p>
+               <p><%= button_to "Download Resume", resume.attachment_url, class: "btn btn-primary"%> </p>
                <%= button_to "Delete",  resume, method: :delete, class: "btn btn-primary", confirm: "Are you sure that you wish to delete #{resume.name}?" %>
 
             </div>
