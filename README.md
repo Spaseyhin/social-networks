@@ -1,1 +1,1 @@
-	Сайт https://serene-hollows-54158.herokuapp.com/
+	Сайт https://lit-shore-57765.herokuapp.com/resumes
