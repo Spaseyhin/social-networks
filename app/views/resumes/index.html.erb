@@ -12,8 +12,9 @@
                <p class="zagolovok"><%= resume.desc%></p>
 
                <p>Страниц: <%= resume.page %></p>
-               <p><%= button_to "Download Resume", resume.attachment_url, class: "btn btn-primary"%> </p>
-               <%= button_to "Delete",  resume, method: :delete, class: "btn btn-primary", confirm: "Are you sure that you wish to delete #{resume.name}?" %>
+
+                <p><%= link_to "Download Resume", resume.attachment_url, class: "btn btn-warning"%></p>
+               <%= button_to "Delete",  resume, method: :delete, class: "btn btn-warning", confirm: "Are you sure that you wish to delete #{resume.name}?" %>
 
             </div>
          </div>

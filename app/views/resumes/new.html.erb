@@ -1,23 +1,23 @@
 	
 <div class = "well">
    <center>
-      <h1>New Book</h1>
+      <h1>Новая книга</h1>
 
       <%= form_for @resume, html: { multipart: true } do |f| %>
 
-      <%= f.text_field :name ,class: "form-control input_new_pos ",placeholder: "Name"%>
+      <%= f.text_field :name ,class: "form-control input_new_pos ",placeholder: "Имя"%>
 
 
 
-      <%= f.text_area :desc,class: "form-control input_new_pos ",placeholder: "Descript",rows: 7%>
+      <%= f.text_area :desc,class: "form-control input_new_pos ",placeholder: "Описание",rows: 7%>
       <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> -->
-      <%= f.text_field :page,  type: "number",class: "form-control input_new_pos ",placeholder: "Pages" %>
+      <%= f.text_field :page,  type: "number",class: "form-control input_new_pos ",placeholder: "Кол-во. Страниц" %>
 
-      <p>File</p><%= f.file_field :attachment ,class: "form-control input_new_pos "%>
+      <p>Файл</p><%= f.file_field :attachment ,class: "form-control input_new_pos "%>
 
-      <p>Image</p><%= f.file_field :image, class: "form-control input_new_pos ",placeholder: "Name" %>
+      <p>Изображение</p><%= f.file_field :image, class: "form-control input_new_pos ",placeholder: "Name" %>
 
-      <%= f.submit "Save", class: "btn btn-primary input_new_pos" %>
+      <%= f.submit "Опубликовать", class: "btn btn-primary input_new_pos" %>
    <% end %>
    </center>
 </div>

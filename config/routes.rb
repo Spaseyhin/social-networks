@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'about' => 'home#about'
   get 'contact' => 'home#contact'
   get 'signup' => 'users#new'
- 
+  get 'resumes/login'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'

@@ -24,12 +24,11 @@ h1 {
     text-align: center;
 }
 h2 {
-    font-size: 1.2em;
-    letter-spacing: -1px;
+
     margin-bottom: 30px;
     text-align: center;
     font-weight: normal;
-    color: #777;
+
 }
 p {
     font-size: 1.1em;
@@ -41,14 +40,7 @@ h1 {
     margin-bottom: 30px;
     text-align: center;
 }
-h2 {
-    font-size: 1.2em;
-    letter-spacing: -1px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-weight: normal;
-    color: #777;
-}
+
 p {
     
     font-size: 1.1em;
@@ -141,7 +133,9 @@ li {
    h1{
      font-family: Arial Narrow;
    }
-
+    h2{
+     font-family: Arial Narrow;
+   }
 
 
 .zagolovok {
@@ -156,4 +150,16 @@ display: box;
 word-wrap: break-word;
 -webkit-box-orient: vertical;
 
+}
+.login {
+    font-size: 70%
+}
+
+
+dropdown:hover {
+background-color: green;
+}
+
+.dropdown.active, .dropdown-item:active {
+background-color: green;
 }

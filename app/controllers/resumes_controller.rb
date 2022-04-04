@@ -11,7 +11,7 @@ class ResumesController < ApplicationController
       @resume = Resume.new(resume_params)
       
       if @resume.save
-         redirect_to resumes_path, notice: "The book #{@resume.name} has been uploaded."
+         redirect_to resumes_path, notice: "Книга #{@resume.name} Опубликована"
       else
          render "new"
       end
@@ -21,7 +21,7 @@ class ResumesController < ApplicationController
    def destroy
       @resume = Resume.find(params[:id])
       @resume.destroy
-      redirect_to resumes_path, notice:  "The book #{@resume.name} has been deleted."
+      redirect_to resumes_path, notice:  "Книга #{@resume.name} удалена"
    end
    
    private
