@@ -2,7 +2,7 @@
       <ul class="nav nav-pills">
 
         <h5>
-          <li><%= link_to "Library", root_path, id: "logo", class: 'nav-link px-2 ' %></li></h5>        <svg width="1em" height="2em" viewBox="0 5 16 16" class="bi bi-bookmark-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <li><%= link_to "Library", root_path, id: "logo", class: 'nav-link px-2 header' %></li></h5>        <svg width="1em" height="2em" viewBox="0 5 16 16" class="bi bi-bookmark-fill logo" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12l-5-3-5 3V3z"/>
 </svg> 
 
@@ -19,14 +19,15 @@
 
           <li class="nav-item dropdown">
 
-          <a class="btn "  id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="btn"  id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
 
-          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-justify" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-justify " fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
 </svg>
             
           </a>
+
           <ul class="dropdown-menu dropdown-menu " >
             <li><%= link_to "Редактировать профиль", edit_user_path(current_user), class: 'nav-link' %></li>
             <li><%= link_to "Выход", logout_path, method: "delete", class: 'nav-link'%></li>
@@ -37,11 +38,36 @@
 
 
         <% else %>
-          <%= link_to "Зарегестрироваться", signup_path,  class: 'nav-link'%>
-          <%= link_to "Войти", login_path, class: 'nav-link'%>
+          <!-- Кнопка-триггер модального окна -->
+          <button class="nav-link" style="color: black; " data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Добавить книгу
+          </button>
+
+          <!-- Модальное окно -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Уведомление</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                  Пожалуйста пройдите небольшую регистрацию, чтобы выкладывать книги</div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <%= link_to "Зарегестрироваться", signup_path,  class: 'nav-link header'%>
+          <%= link_to "Войти", login_path, class: 'nav-link header'%>
 
           <!-- Кнопка-триггер модального окна -->
-          <button class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button class="nav-link "style="color: black; " data-bs-toggle="modal" data-bs-target="#exampleModal">
             Анотации
           </button>
 
@@ -50,20 +76,18 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Заголовок модального окна</h5>
+                  <h5 class="modal-title" id="exampleModalLabel">Анотации</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                 </div>
                 <div class="modal-body">
-                  ...
-                </div>
+                  Так как Heroku не может долго хранить файлы, я создал первые 8 книг, которые являются заглушками, и служат для демонстрации дизайна сайта, вы можете для ознакомления функционала добавить кенигу, и её обложку</div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                  <button type="button" class="btn btn-primary">Сохранить изменения</button>
+
                 </div>
               </div>
             </div>
           </div>
-
         <!-- __________________________________________________________________________________________ -->
 
         <%end%>
