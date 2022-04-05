@@ -92,6 +92,8 @@
          </div> 
 </div>
 <!-- ________________________________________________________________________________ -->
+
+<!-- Этот код нужен для демонстрации внешнего вида сайта,кнопки простые заглушки , вы можете загрузить книгу, но через какое то время она исчезнет, так как хероку не может хранить файлы на своем сервере долгое время-->
 <div class="portfolio">
 
    <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 g-2">
@@ -102,14 +104,10 @@
                <br/>
                <br/>
                <br/>
-
                   <%= link_to "Удалить",  resume, method: :delete, class: "btn btn-light", data: {confirm: "Are you sure?"} %>
 
                   <%= link_to "Скачать", resume.attachment_url, class: "btn btn-light"%>
                <br/>
-                  
-
-                  
          </span><%= image_tag(resume.image.thumb.url, alt: 'Image', class: "img") if resume.image?  %>
          </li></ul> 
          </div>
