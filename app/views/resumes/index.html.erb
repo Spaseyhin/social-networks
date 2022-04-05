@@ -1,3 +1,123 @@
+<div class="portfolio">
+<!-- Этот код нужен для демонстрации внешнего вида сайта,кнопки простые заглушки , вы можете загрузить книгу, но через какое то время она исчезнет, так как хероку не может хранить файлы на своем сервере долгое время-->
+
+   <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 g-2">
+
+         <div class="col">
+            <ul><li><span class="descr"><h4>Не так уж и сложно</h4>
+               <br/>
+               <br/>
+               <button type="button" class="btn btn-light">Светлый</button>
+               <br/>
+               <br/>
+               <button type="button" class="btn btn-light">Светлый</button>
+
+         </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (2).jpg", class: "img" %>
+         </li></ul> 
+         </div> 
+<!-- ________________________________________________________________________________ -->
+         <div class="col">
+            <ul><li><span class="descr"><h4>О чем молчит печень</h4>
+               <br/>
+               <br/>
+               <button type="button" class="btn btn-light">Светлый</button>
+               <br/>
+               <br/>
+               <button type="button" class="btn btn-light">Светлый</button>
+
+         </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (4).jpg", class: "img" %>
+         </li></ul> 
+         </div> 
+<!-- ________________________________________________________________________________ -->
+         <div class="col">
+            <ul><li><span class="descr"><h4>что делать когда не знаешь что делать</h4>
+               <br/>
+               <br/>
+               <button type="button" class="btn btn-light">Светлый</button>
+               <br/>
+               <br/>
+               <button type="button" class="btn btn-light">Светлый</button>
+
+         </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (3).jpg", class: "img" %>
+         </li></ul> 
+         </div> 
+<!-- ________________________________________________________________________________ -->
+         <div class="col">
+            <ul><li><span class="descr"><h4>Как изобрести все</h4>
+               <br/>
+               <br/>
+               <button type="button" class="btn btn-light">Светлый</button>
+               <br/>
+               <br/>
+               <button type="button" class="btn btn-light">Светлый</button>
+
+         </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (1).jpg", class: "img" %>
+         </li></ul> 
+         </div> 
+<!-- ________________________________________________________________________________ -->
+         <div class="col">
+            <ul><li><span class="descr"><h4>Как изобрести все</h4>
+               <br/>
+               <br/>
+               <button type="button" class="btn btn-light">Светлый</button>
+               <br/>
+               <br/>
+               <button type="button" class="btn btn-light">Светлый</button>
+
+         </span><%= image_tag "o-o.jpeg", class: "img" %>
+         </li></ul> 
+         </div> 
+<!-- ________________________________________________________________________________ -->
+
+         <div class="col">
+            <ul><li><span class="descr"><h4>Как изобрести все</h4>
+               <br/>
+               <br/>
+               <button type="button" class="btn btn-light">Светлый</button>
+               <br/>
+               <br/>
+               <button type="button" class="btn btn-light">Светлый</button>
+
+         </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (4) (2).jpg", class: "img" %>
+         </li></ul> 
+         </div> 
+<!-- ________________________________________________________________________________ -->
+
+         <div class="col">
+            <ul><li><span class="descr"><h4>Как изобрести все</h4>
+               <br/>
+               <br/>
+               <button type="button" class="btn btn-light">Светлый</button>
+               <br/>
+               <br/>
+               <button type="button" class="btn btn-light">Светлый</button>
+
+         </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (4) (1).jpg", class: "img" %>
+         </li></ul> 
+         </div> 
+<!-- ________________________________________________________________________________ -->
+
+         <div class="col">
+            <ul><li><span class="descr"><h4>Как изобрести все</h4>
+               <br/>
+               <br/>
+               <button type="button" class="btn btn-light">Светлый</button>
+               <br/>
+               <br/>
+               <button type="button" class="btn btn-light">Светлый</button>
+
+         </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (4) (3).jpg", class: "img" %>
+         </li></ul> 
+         </div> 
+
+
+
+
+
+</div>
+
+
+
 
 
 
@@ -6,16 +126,20 @@
 
 <div class="portfolio">
 
-   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-1">
+   <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 g-2">
       <% @resumes.each do |resume| %>
          <div class="col">
-            <ul><li><span class="descr"><h4><%= resume.name %>
-               <p>
-                  <%= link_to "Download ", resume.attachment_url, class: "btn btn-light"%>
+            <ul><li><span class="descr"><h4><%= resume.name %></h4>
+               <br/>
+               <br/>
 
-                  <%= button_to "Delete",  resume, method: :delete, class: "btn btn-light", confirm: "Are you sure that you wish to delete #{resume.name}?" %>
-                  <br/>
-            </h4>
+
+
+                  <%= button_to "Удалить",  resume, method: :delete, class: "btn btn-light", data: {confirm: "Are you sure?"} %>
+               <br/>
+                  <%= link_to "Скачать", resume.attachment_url, class: "btn btn-light"%>
+
+                  
          </span><%= image_tag(resume.image.thumb.url, alt: 'Image', class: "img") if resume.image?  %>
          </li></ul> 
          </div>
