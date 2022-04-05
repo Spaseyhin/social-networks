@@ -69,12 +69,14 @@
             <ul><li><span class="descr"><h4><%= resume.name %></h4>
                <br/>
                <br/>
-
-
-
-                  <%= button_to "Удалить",  resume, method: :delete, class: "btn btn-light", data: {confirm: "Are you sure?"} %>
                <br/>
+               <br/>
+
+                  <%= link_to "Удалить",  resume, method: :delete, class: "btn btn-light", data: {confirm: "Are you sure?"} %>
+
                   <%= link_to "Скачать", resume.attachment_url, class: "btn btn-light"%>
+               <br/>
+                  
 
                   
          </span><%= image_tag(resume.image.thumb.url, alt: 'Image', class: "img") if resume.image?  %>
