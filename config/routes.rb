@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
+  get "home/download_pdf"
   resources :users
  
    resources :resumes, only: [:index,  :new, :create, :destroy]

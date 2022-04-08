@@ -23,6 +23,14 @@ class ResumesController < ApplicationController
       @resume.destroy
       redirect_to resumes_path, notice:  "Книга #{@resume.name} удалена"
    end
+
+   def download_pdf
+   send_file(
+    "#{Rails.root}/public/1.pdf",
+    filename: "your_custom_file_name.pdf",
+    type: "application/pdf")
+   end
+
    
    private
       def resume_params
