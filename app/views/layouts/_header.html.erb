@@ -92,6 +92,32 @@
           </div>
 
 
+                    <!-- Кнопка-триггер модального окна -->
+          <button class="nav-link " style="color: black; " data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Анотации
+          </button>
+
+          <!-- Модальное окно -->
+          <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog ">
+              <div class="modal-content ">
+                <div class="modal-header ">
+                  <h5 class="modal-title " id="exampleModalLabel">Уведомление</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body ">
+
+                  Так как Heroku не может долго хранить файлы, я создал первые 8 книг, которые являются заглушками, и служат для демонстрации дизайна сайта, вы можете для ознакомления функционала добавить книгу, и её обложку.
+                  Так же у книг есть описание и количество страниц, но пока что этот функцционал не отображается
+                 </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
 
 
           <%= link_to "Зарегестрироваться", signup_path,  class: 'nav-link header'%>
