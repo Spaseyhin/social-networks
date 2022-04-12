@@ -1,3 +1,4 @@
+
 <div class="portfolio">
 <div class="ratio_image ratio_image_1x1">
  <ul><li><span class="descr"><h4>Не так уж и сложно</h4>
@@ -17,7 +18,7 @@
                <br/>
                <button type="button" class="btn btn-light">Скачать</button>
 
-
+               <p></p>
          </span><%= image_tag "1.jpg", class: "img" %>
          </li></ul> 
 
@@ -81,17 +82,19 @@
 <!-- Этот код нужен для демонстрации внешнего вида сайта,кнопки простые заглушки , вы можете загрузить книгу, но через какое то время она исчезнет, так как хероку не может хранить файлы на своем сервере долгое время-->
 
 
-   <div class="ratio_image ratio_image_1x1">
+
       <% @resumes.each do |resume| %>
-         <div class="col">
+            <div class="ratio_image ratio_image_1x1">
             <ul><li><span class="descr"><h4><%= resume.name %></h4>
                <br/>
                <br/>
                <br/>
                <br/>
+                  
                   <%= link_to "Удалить",  resume, method: :delete, class: "btn btn-light", data: {confirm: "Are you sure?"} %>
 
                   <%= link_to "Скачать", resume.attachment_url, class: "btn btn-light"%>
+
                <br/>
          </span><%= image_tag(resume.image.thumb.url, alt: 'Image', class: "img") if resume.image?  %>
          </li></ul> 
