@@ -1,105 +1,81 @@
-
+ <!-- Этот код нужен для демонстрации внешнего вида сайта, вы можете загрузить книгу, но через какое то время она исчезнет, так как хероку не может хранить файлы на своем сервере долгое время-->
 <div class="portfolio">
-<div class="ratio_image ratio_image_1x1">
- <ul><li><span class="descr"><h4>Не так уж и сложно</h4>
-               <br/>
-               <br/>
-               <button type="button" class="btn btn-light">Скачать</button>
-
-
+   <div class="ratio_image ratio_image_1x1">
+      <ul><li><span class="descr">
+         <h4>Не так уж и сложно</h4>
+         <br/><br/>
+         <button type="button" class="btn btn-light">Скачать</button>
          </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (2).jpg", class: "img" %>
+      </li></ul> 
+   </div>
 
-</div>
-<div class="ratio_image ratio_image_1x1">
-   <ul><li>
-
-<span class="descr" ><h4>Тревожные люди</h4>
-               <br/>
-               <br/>
-               <button type="button" class="btn btn-light">Скачать</button>
-
-               <p></p>
+   <div class="ratio_image ratio_image_1x1">
+      <ul><li><span class="descr">
+         <h4>Тревожные люди</h4>
+         <br/><br/>
+         <button type="button" class="btn btn-light">Скачать</button>
          </span><%= image_tag "1.jpg", class: "img" %>
+      </li></ul> 
+
+   </div>
+
+
+   <div class="ratio_image ratio_image_1x1">
+      <ul><li><span class="descr">
+         <h4>О чем молчит печень</h4>
+            <br/><br/>
+            <button type="button" class="btn btn-light">Скачать</button>
+            </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (4).jpg", class: "img" %>
          </li></ul> 
+   </div>
 
-</div>
-
-
-<div class="ratio_image ratio_image_1x1">
-            <ul><li><span class="descr"><h4>О чем молчит печень</h4>
-               <br/>
-               <br/>
-               <button type="button" class="btn btn-light">Скачать</button>
-
-
-         </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (4).jpg", class: "img" %>
-         </li></ul> 
-
-</div>
-
-
-<div class="ratio_image ratio_image_1x1">
- <ul><li><span class="descr"><h4>Что делать когда не знаешь что делать</h4>
-               <br/>
-               <br/>
-               <button type="button" class="btn btn-light">Скачать</button>
-
-
+   <div class="ratio_image ratio_image_1x1">
+      <ul><li><span class="descr">
+      <h4>Что делать когда не знаешь что делать</h4>
+         <br/><br/>
+         <button type="button" class="btn btn-light">Скачать</button>
          </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (3).jpg", class: "img" %>
          </li></ul> 
-
-</div>
-
-
-<div class="ratio_image ratio_image_1x1">
-            <ul><li><span class="descr"><h4>Как изобрести все</h4>
-               <br/>
-               <br/>
-               <button type="button" class="btn btn-light">Скачать</button>
+   </div>
 
 
+   <div class="ratio_image ratio_image_1x1">
+      <ul><li><span class="descr">
+         <h4>Как изобрести все</h4>
+         <br/><br/>
+         <button type="button" class="btn btn-light">Скачать</button>
          </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (1).jpg", class: "img" %>
          </li></ul> 
 
-</div>
-<div class="ratio_image ratio_image_1x1">
-            <ul><li><span class="descr"><h4>Ночной болтун</h4>
-               <br/>
-               <br/>
-               <button type="button" class="btn btn-light">Скачать</button>
-
-
+   </div>
+   <div class="ratio_image ratio_image_1x1">
+      <ul><li><span class="descr">
+         <h4>Ночной болтун</h4>
+         <br/><br/>
+         <button type="button" class="btn btn-light">Скачать</button>
          </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (4) (1).jpg", class: "img" %>
          </li></ul> 
-</div>
+   </div>
 
 
 
 
 
-
-
-<!-- Этот код нужен для демонстрации внешнего вида сайта,кнопки простые заглушки , вы можете загрузить книгу, но через какое то время она исчезнет, так как хероку не может хранить файлы на своем сервере долгое время-->
+   <!-- Этот код нужен для демонстрации внешнего вида сайта, вы можете загрузить книгу, но через какое то время она исчезнет, так как хероку не может хранить файлы на своем сервере долгое время-->
 
 
 
-      <% @resumes.each do |resume| %>
-            <div class="ratio_image ratio_image_1x1">
-            <ul><li><span class="descr"><h4><%= resume.name %></h4>
-               <br/>
-               <br/>
-               <br/>
-               <br/>
-                  
-                  <%= link_to "Удалить",  resume, method: :delete, class: "btn btn-light", data: {confirm: "Are you sure?"} %>
+         <% @resumes.each do |resume| %>
+               <div class="ratio_image ratio_image_1x1">
+               <ul><li><span class="descr"><h4><%= resume.name %></h4>
+                  <br/><br/><br/><br/>
+                     <%= link_to "Удалить",  resume, method: :delete, class: "btn btn-light", data: {confirm: "Are you sure?"} %>
+                     <%= link_to "Скачать", resume.attachment_url, class: "btn btn-light"%>
+                  <br/>
+            </span><%= image_tag(resume.image.thumb.url, alt: 'Image', class: "img") if resume.image?  %>
+            </li></ul> 
+            </div>
+         <% end %>
+   </div>
 
-                  <%= link_to "Скачать", resume.attachment_url, class: "btn btn-light"%>
-
-               <br/>
-         </span><%= image_tag(resume.image.thumb.url, alt: 'Image', class: "img") if resume.image?  %>
-         </li></ul> 
-         </div>
-      <% end %>
-</div>
-
-   
+      
