@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get "home/download_pdf"
   resources :users
  
+   resources :books, only: [:index,  :new, :create, :destroy]
    resources :resumes, only: [:index,  :new, :create, :destroy]
-   root "resumes#index"
+   root "books#index"
  end

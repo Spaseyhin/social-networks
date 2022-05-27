@@ -3,7 +3,7 @@
    <center>
       <h1>Новая книга</h1>
 
-      <%= form_for @resume, html: { multipart: true } do |f| %>
+      <%= form_for @book, html: { multipart: true } do |f| %>
 
       <%= f.text_field :name ,class: "form-control input_new_pos ",placeholder: "Имя"%>
 
@@ -20,4 +20,4 @@
       <%= f.submit "Опубликовать", class: "btn btn-primary input_new_pos" %>
    <% end %>
    </center>
-</div>
+</div>/
