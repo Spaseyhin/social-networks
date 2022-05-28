@@ -23,6 +23,11 @@ class BooksController < ApplicationController
       @book.destroy
       redirect_to book_path, notice:  "Книга #{@book.name} удалена"
    end
+
+   def download_pdf
+      send_file "#{Rails.root}/public/books/Книга", x_sendfile: true
+
+   end
    
    private
       def book_params
