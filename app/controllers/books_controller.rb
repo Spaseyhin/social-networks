@@ -1,14 +1,14 @@
 class BooksController < ApplicationController
    def index
-      @books = Books.all
+      @books = Book.all
    end
    
    def new
-      @book = Books.new
+      @book = Book.new
    end
 
    def create
-      @book = Books.new(book_params)
+      @book = Book.new(book_params)
       
       if @book.save
          redirect_to book_path, notice: "Книга #{@book.name} Опубликована"
@@ -19,7 +19,7 @@ class BooksController < ApplicationController
    end
    
    def destroy
-      @book = Books.find(params[:id])
+      @book = Book.find(params[:id])
       @book.destroy
       redirect_to book_path, notice:  "Книга #{@book.name} удалена"
    end
