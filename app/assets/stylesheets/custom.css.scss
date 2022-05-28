@@ -256,3 +256,9 @@ body {overflow-y: scroll}
     position: relative;
     width: 200px;
 }
+
+body{
+    overflow:hidden;
+overflow-y:hidden;  /*для вертикального*/
+overflow-x:hidden;  /*для горизонтального*/
+}

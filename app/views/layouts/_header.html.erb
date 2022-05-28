@@ -10,11 +10,11 @@
         
 
         <% if logged_in? %>
-        <%= link_to "Профиль", current_user, class: 'nav-link header'%>
+        <%= link_to "Профиль", current_user, class: 'nav-link header', style: 'color: #000000'%>
 
         
 
-        <li><%= link_to "Добавить книгу", new_book_path, class: 'nav-link header' %></li>
+        <li><%= link_to "Добавить книгу", new_book_path, class: 'nav-link header', style: 'color: #000000' %></li>
          <!-- Кнопка-триггер модального окна -->
           <button class="nav-link "style="color: black; " data-bs-toggle="modal" data-bs-target="#exampleModal">
             Анотации
@@ -56,8 +56,8 @@
           </a>
 
           <ul class="dropdown-menu dropdown-menu " >
-            <li><%= link_to "Редактировать профиль", edit_user_path(current_user), class: 'nav-link' %></li>
-            <li><%= link_to "Выход", logout_path, method: "delete", class: 'nav-link'%></li>
+            <li><%= link_to "Редактировать профиль", edit_user_path(current_user), class: 'nav-link', style: 'color: #000000' %></li>
+            <li><%= link_to "Выход", logout_path, method: "delete", class: 'nav-link', style: 'color: #000000'%></li>
 
             
           </ul>
@@ -95,8 +95,8 @@
 
 
 
-          <%= link_to "Зарегестрироваться", signup_path,  class: 'nav-link header'%>
-          <%= link_to "Войти", login_path, class: 'nav-link header'%>
+          <%= link_to "Зарегестрироваться", signup_path,  class: 'nav-link header', style: 'color: #000000'%>
+          <%= link_to "Войти", login_path, class: 'nav-link header', style: 'color: #000000'%>
 
 
         <!-- __________________________________________________________________________________________ -->
