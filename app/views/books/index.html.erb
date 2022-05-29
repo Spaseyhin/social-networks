@@ -68,9 +68,12 @@
          <% @books.each do |book| %>
                <div class="ratio_image ratio_image_1x1">
                <ul><li><span class="descr"><h4><%= book.name %></h4>
-                  <br/><br/><br/><br/>
+                  <br/>
+                     <%= link_to "О книге",  book , class: "btn btn-light"%>
                      <%= link_to "Удалить",  book, method: :delete, class: "btn btn-light", data: {confirm: "Are you sure?"} %>
-                     <%= link_to "Скачать", book.attachment_url, class: "btn btn-light"%>
+            
+                     
+                     
                   <br/>
             </span><%= image_tag(book.image.thumb.url, alt: 'Image', class: "img") if book.image?  %>
             </li></ul> 

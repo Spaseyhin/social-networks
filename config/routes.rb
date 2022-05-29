@@ -2,7 +2,6 @@
 
 Rails.application.routes.draw do
   get 'user/new'
-  get 'resumes/show'
   get 'users/new'
   get 'article/new'
   get 'index' => 'home#index'
@@ -14,11 +13,12 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   get "home/download_pdf"
-  resources :users
- 
- get 'download_pdf', to: "books#download_pdf"
 
-   resources :books, only: [:index,  :new, :create, :destroy]
-   resources :resumes, only: [:index,  :new, :create, :destroy]
-   root "books#index"
+
+  get 'download_pdf', to: "books#download_pdf"
+
+  resources :users
+  resources :books
+  
+  root "books#index"
  end

@@ -1,0 +1,5 @@
+<h1><%= @book.name %></h1>
+<h1><%= @book.desc %></h1>
+<%= @book.image %>
+
+ <%= link_to "Скачать", @book.attachment_url, class: "btn btn-dark"%>
