@@ -29,7 +29,11 @@ class BooksController < ApplicationController
    end
 
    def download_pdf
-      send_file "#{Rails.root}/public/books/Книга", x_sendfile: true
+      send_file "#{Rails.root}/public/books/Книга.docx", x_sendfile: true
+   end
+
+   def download_jpg
+      send_file "#{Rails.root}/public/books/обложка.jpg", x_sendfile: true
    end
    
    private

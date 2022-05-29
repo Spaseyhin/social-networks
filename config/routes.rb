@@ -12,13 +12,14 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
-  get "home/download_pdf"
+  get 'home/download_pdf'
+  get 'books/file'
 
-
-  get 'download_pdf', to: "books#download_pdf"
+  get 'download_pdf', to: 'books#download_pdf'
+  get 'download_jpg', to: 'books#download_jpg'
 
   resources :users
   resources :books
-  
-  root "books#index"
- end
+
+  root 'books#index'
+end
