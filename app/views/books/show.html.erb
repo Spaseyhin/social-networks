@@ -1,5 +1,5 @@
 <h1><%= @book.name %></h1>
-<h1><%= @book.desc %></h1>
-<%= @book.image %>
+<h3><%= @book.desc %></h3>
+<%= image_tag(book.image.thumb.url, alt: 'Image', class: "img") if book.image?  %>
 
  <%= link_to "Скачать", @book.attachment_url, class: "btn btn-dark"%>
