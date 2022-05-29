@@ -21,12 +21,11 @@ class BooksController < ApplicationController
    def destroy
       @book = Book.find(params[:id])
       @book.destroy
-      redirect_to book_path, notice:  "Книга #{@book.name} удалена"
+      redirect_to root_path, notice:  "Книга #{@book.name} удалена"
    end
 
    def download_pdf
       send_file "#{Rails.root}/public/books/Книга", x_sendfile: true
-
    end
    
    private
