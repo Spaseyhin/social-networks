@@ -3,6 +3,6 @@
 <p>Описание:</p>
 <h3><%= @book.desc %></h3>
 <br/>
-<%= image_tag(book.image.thumb.url, alt: 'Image', class: "img") if book.image?  %>
+<%= image_tag(@book.image.thumb.url, alt: 'Image', class: "img") if @book.image?  %>
 <br/>
  <%= link_to "Скачать", @book.attachment_url, class: "btn btn-dark"%>
