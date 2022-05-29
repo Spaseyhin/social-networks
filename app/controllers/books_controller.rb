@@ -11,7 +11,7 @@ class BooksController < ApplicationController
       @book = Book.new(book_params)
       
       if @book.save
-         redirect_to book_path, notice: "Книга #{@book.name} Опубликована"
+         redirect_to root_path, notice: "Книга #{@book.name} Опубликована"
       else
          render "new"
       end
@@ -35,3 +35,5 @@ class BooksController < ApplicationController
    end
    
 end
+
+
