@@ -33,10 +33,10 @@ class BooksController < ApplicationController
    end
    
    private
-      def book_params
+
+   def book_params
       params.require(:book).permit(:name, :attachment, :desc, :page, :image)
    end
-   
 end
 
 
