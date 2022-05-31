@@ -12,10 +12,10 @@
         <% if logged_in? %>
 
         
-        <li><%= link_to "Файлы", books_file_path, class: 'nav-link header', style: 'color: #000000' %></li>
-        <li><%= link_to "Добавить книгу", new_book_path, class: 'nav-link header', style: 'color: #000000' %></li>
+        <li><%= link_to "Файлы", books_file_path, class: 'nav-link header', style: 'color: #000000;font-family: Arial Narrow;' %></li>
+        <li><%= link_to "Добавить книгу", new_book_path, class: 'nav-link header', style: 'color: #000000;font-family: Arial Narrow;' %></li>
          <!-- Кнопка-триггер модального окна -->
-          <button class="nav-link "style="color: black; " data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button class="nav-link "style="color: black;font-family: Arial Narrow; " data-bs-toggle="modal" data-bs-target="#exampleModal">
             Анотации
           </button>
 
@@ -29,9 +29,8 @@
                 </div>
                 <div class="modal-body">
                   
-
-                  Так как Heroku не может долго хранить файлы, я создал первые 8 книг, которые являются заглушками, и служат для демонстрации дизайна сайта.
-
+                  <p>Так как Heroku не может долго хранить файлы, я создал первые 6 книг, которые являются заглушками, и служат для демонстрации дизайна сайта.</p>
+                  
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
@@ -54,9 +53,9 @@
           </a>
 
           <ul class="dropdown-menu dropdown-menu " >
-            <li><%= link_to "Редактировать профиль", edit_user_path(current_user), class: 'nav-link', style: 'color: #000000' %></li>
-            <li><%= link_to "Профиль", current_user, class: 'nav-link', style: 'color: #000000'%></li>
-            <li><%= link_to "Выход", logout_path, method: "delete", class: 'nav-link', style: 'color: #000000'%></li>
+            <li><%= link_to "Редактировать профиль", edit_user_path(current_user), class: 'nav-link', style: 'color: #000000;font-family: Arial Narrow;' %></li>
+            <li><%= link_to "Профиль", current_user, class: 'nav-link', style: 'color: #000000;font-family: Arial Narrow;'%></li>
+            <li><%= link_to "Выход", logout_path, method: "delete", class: 'nav-link', style: 'color: #000000;font-family: Arial Narrow;'%></li>
 
 
             
@@ -66,7 +65,7 @@
 
         <% else %>
           <!-- Кнопка-триггер модального окна -->
-          <button class="nav-link" style="color: black; " data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button class="nav-link" style="color: black;;font-family: Arial Narrow; " data-bs-toggle="modal" data-bs-target="#exampleModal">
             Добавить книгу
           </button>
 
@@ -95,8 +94,8 @@
 
 
 
-          <%= link_to "Зарегестрироваться", signup_path,  class: 'nav-link header', style: 'color: #000000'%>
-          <%= link_to "Войти", login_path, class: 'nav-link header', style: 'color: #000000'%>
+          <%= link_to "Зарегестрироваться", signup_path,  class: 'nav-link header', style: 'color: #000000;font-family: Arial Narrow;'%>
+          <%= link_to "Войти", login_path, class: 'nav-link header', style: 'color: #000000;font-family: Arial Narrow;'%>
 
 
         <!-- __________________________________________________________________________________________ -->

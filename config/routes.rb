@@ -14,6 +14,12 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   get 'home/download_pdf'
   get 'books/file'
+  get 'bshow/one'
+  get 'bshow/to'
+  get 'bshow/tri'
+  get 'bshow/four'
+  get 'bshow/five'
+  get 'bshow/six'
 
   get 'download_pdf', to: 'books#download_pdf'
   get 'download_jpg', to: 'books#download_jpg'

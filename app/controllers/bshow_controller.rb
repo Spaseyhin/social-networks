@@ -1,0 +1,2 @@
+class BshowController < ApplicationController
+end

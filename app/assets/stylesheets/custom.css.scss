@@ -14,20 +14,15 @@ section {overflow: auto;}
 
 textarea {resize: vertical;}
 
-h1, h2, h3, h4, h5, h6 {line-height: 1;}
+h1, h2, h3, h4, h5, h6 {line-height: 1;
+font-family: Arial Narrow;}
 
 
 
 p {
     font-size: 1.1em;
     line-height: 1.7em;
-}
-
-
-p {
-    
-    font-size: 1.1em;
-    line-height: 1.7em;
+    font-family: Arial Narrow;
 }
 
 
@@ -72,7 +67,7 @@ margin-top: 45px;
 
 .input_new_pos {
     margin-top: 2%;
-    width: 300px;
+    width: 380px;
 }
 
 html {
@@ -104,10 +99,6 @@ li {
 
    }
    
-
-   h1{font-family: Arial Narrow;}
-   h2{font-family: Arial Narrow;}
-
 .colorlink{ color: #000000;}
 .colorlink:active{ color: #000000;}
 .colorlink:visited {color: #000000; /* Цвет посещенных ссылок */}
@@ -237,4 +228,26 @@ body{
     overflow:hidden;
 overflow-y:hidden;  /*для вертикального*/
 overflow-x:hidden;  /*для горизонтального*/
+}
+
+.p_mar{
+    margin-bottom: 10%;
+}
+
+
+ .custom-file-input-image::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input-image::before {
+  content: 'Обложка    ';
+
+}
+
+
+ .custom-file-input-file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input-file::before {
+  content: 'Книга           ';
+
 }
