@@ -66,8 +66,12 @@ margin-top: 45px;
 
 
 .input_new_pos {
-    margin-top: 2%;
+    margin-top: 1%;
     width: 380px;
+}
+.input_new_user {
+    margin-top: 1%;
+    width: 300px;
 }
 
 html {
@@ -250,4 +254,10 @@ overflow-x:hidden;  /*для горизонтального*/
 .custom-file-input-file::before {
   content: 'Книга           ';
 
+}
+
+
+.checkbox-remember-me{
+    margin-top: 15px;
+    margin-bottom: 5px;
 }

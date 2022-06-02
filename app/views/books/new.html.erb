@@ -1,16 +1,19 @@
-<center>
-      <h1>Новая книга</h1>
 
-      <%= form_for @book, html: { multipart: true } do |f| %>
 
-      <%= f.text_field :name ,class: "form-control input_new_pos ",placeholder: "Имя"%>
-      <%= f.text_area :desc,class: "form-control input_new_pos ",placeholder: "Описание",rows: 7%>
-      <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> -->
+<center><h1>Новая книга</h1>
+
+      <%= form_for @book, html: { multipart: true } do |f| %>  
+      <%= f.text_field :name ,class: "form-control  input_new_pos",placeholder: "Имя"%>
+
       <%= f.text_field :page,  type: "number",class: "form-control input_new_pos ",placeholder: "Кол-во. Страниц" %>
-      <%= f.file_field :attachment ,class: "form-control input_new_pos custom-file-input-file"%>
-      <%= f.file_field :image, class: "form-control input_new_pos custom-file-input-image "%>
+      <%= f.file_field :attachment ,class: "form-control  custom-file-input-file input_new_pos"%>
+      <%= f.file_field :image, class: "form-control  custom-file-input-image input_new_pos"%>
 
-      <%= f.submit "Опубликовать", class: "btn btn-dark input_new_pos" %>
-   <% end %>
-</center>
-   
+      
+      <%= f.text_area :desc,class: "form-control  input_new_pos",placeholder: "Описание",rows: 15%>
+      <%= f.submit "Опубликовать", class: "btn btn-dark  input_new_pos" %>
+
+<% end %>
+
+         
+   </center>

@@ -8,17 +8,17 @@
 
 			<%= form_for(:session, url: login_path) do |f| %>
 
-			<%= f.email_field :email , placeholder: "Имя", class: "form-control input_new_pos "%>
+			<%= f.email_field :email , placeholder: "Имя", class: "form-control input_new_user "%>
 
-			<%= f.password_field :password, placeholder: "Пароль", class: "form-control input_new_pos"%>
+			<%= f.password_field :password, placeholder: "Пароль", class: "form-control input_new_user"%>
 			<%= f.label :remember_me, class: "checkbox inline" do %>
-			<%= f.check_box :remember_me %>
+			<%= f.check_box :remember_me , class: 'checkbox-remember-me'%>
 			<span>Запомнить меня</span>
 			<% end %>
 			<br/>
 
 
-			<%= f.submit "Войти", class: "btn btn-primary input_new_pos"%>
+			<%= f.submit "Войти", class: "btn btn-primary input_new_user"%>
 
 			<% end %>
 		</center>
