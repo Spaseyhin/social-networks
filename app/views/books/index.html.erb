@@ -1,4 +1,6 @@
- <!-- Этот код нужен для демонстрации внешнего вида сайта, вы можете загрузить книгу, но через какое то время она исчезнет, так как хероку не может хранить файлы на своем сервере долгое время-->
+<!-- Этот код нужен для демонстрации внешнего вида сайта,
+ вы можете загрузить книгу, но через какое то время она исчезнет,
+ так как хероку не может хранить файлы на своем сервере долгое время-->
 <div class="portfolio">
    <div class="ratio_image ratio_image_1x1">
       <ul><li><span class="descr">
@@ -6,7 +8,7 @@
          <br/><br/>
          <%= link_to "Подробнее", bshow_one_path, class: "btn btn-light" %>
          </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (2).jpg", class: "img" %>
-      </li></ul> 
+      </li></ul>
    </div>
 
    <div class="ratio_image ratio_image_1x1">
@@ -15,8 +17,7 @@
          <br/><br/>
          <%= link_to "Подробнее", bshow_to_path, class: "btn btn-light" %>
          </span><%= image_tag "1.jpg", class: "img" %>
-      </li></ul> 
-
+      </li></ul>
    </div>
 
 
@@ -26,7 +27,7 @@
             <br/><br/>
             <%= link_to "Подробнее", bshow_tri_path, class: "btn btn-light" %>
             </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (4).jpg", class: "img" %>
-         </li></ul> 
+         </li></ul>
    </div>
 
    <div class="ratio_image ratio_image_1x1">
@@ -35,7 +36,7 @@
          <br/><br/>
          <%= link_to "Подробнее", bshow_four_path, class: "btn btn-light" %>
          </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (3).jpg", class: "img" %>
-         </li></ul> 
+         </li></ul>
    </div>
 
 
@@ -45,7 +46,7 @@
          <br/><br/>
          <%= link_to "Подробнее", bshow_five_path, class: "btn btn-light" %>
          </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (1).jpg", class: "img" %>
-         </li></ul> 
+         </li></ul>
 
    </div>
    <div class="ratio_image ratio_image_1x1">
@@ -54,31 +55,20 @@
          <br/><br/>
          <%= link_to "Подробнее", bshow_six_path, class: "btn btn-light" %>
          </span><%= image_tag "147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere (4) (1).jpg", class: "img" %>
-         </li></ul> 
+         </li></ul>
    </div>
 
+   <!-- Этот код нужен для демонстрации внешнего вида сайта,
+    вы можете загрузить книгу, но через какое то время она исчезнет,
+    так как хероку не может хранить файлы на своем сервере долгое время-->
 
-
-
-
-   <!-- Этот код нужен для демонстрации внешнего вида сайта, вы можете загрузить книгу, но через какое то время она исчезнет, так как хероку не может хранить файлы на своем сервере долгое время-->
-
-
-
-         <% @books.each do |book| %>
-               <div class="ratio_image ratio_image_1x1">
-               <ul><li><span class="descr"><h4><%= book.name %></h4>
-                  <br/>
-                     <%= link_to "Подробнее",  book , class: "btn btn-light"%>
-                     
-            
-                     
-                     
-                  <br/>
-            </span><%= image_tag(book.image.thumb.url, alt: 'Image', class: "img") if book.image?  %>
-            </li></ul> 
-            </div>
-         <% end %>
+        <% @books.each do |book| %>
+          <div class="ratio_image ratio_image_1x1">
+            <ul><li>
+            <span class="descr"><h4><%= book.name %></h4>
+            <br/><%= link_to "Подробнее",  book , class: "btn btn-light"%> </span>
+            <%= image_tag(book.image.thumb.url, alt: 'Image', class: "img") if book.image? %>
+            </li></ul>
+          </div>
+        <% end %>
    </div>
-
-      

@@ -2,18 +2,18 @@
 
 <center><h1>Новая книга</h1>
 
-      <%= form_for @book, html: { multipart: true } do |f| %>  
+      <%= form_for @book, html: { multipart: true } do |f| %>
       <%= f.text_field :name ,class: "form-control  input_new_pos",placeholder: "Имя"%>
 
       <%= f.text_field :page,  type: "number",class: "form-control input_new_pos ",placeholder: "Кол-во. Страниц" %>
       <%= f.file_field :attachment ,class: "form-control  custom-file-input-file input_new_pos"%>
       <%= f.file_field :image, class: "form-control  custom-file-input-image input_new_pos"%>
 
-      
+
       <%= f.text_area :desc,class: "form-control  input_new_pos",placeholder: "Описание",rows: 15%>
-      <%= f.submit "Опубликовать", class: "btn btn-dark  input_new_pos" %>
+      <%= f.submit "Опубликовать", class: "btn btn-primary  input_new_pos" %>
 
 <% end %>
 
-         
+
    </center>
