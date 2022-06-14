@@ -1,6 +1,14 @@
   require 'test_helper'
 
 class BooksControllerTest < ActionDispatch::IntegrationTest
+  def setup
+    @book = Book.new(name: "Book Name", desc: "Book description", page: "Book page")
+  end
+
+  test "should be valid book" do
+    assert @book.valid?
+  end
+
 
   test "checking book references" do
     get books_path
