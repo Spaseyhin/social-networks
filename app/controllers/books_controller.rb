@@ -14,7 +14,7 @@ class BooksController < ApplicationController
       @book = Book.new(book_params)
       
       if @book.save
-         redirect_to root_path, notice: "Книга #{@book.name} Опубликована"
+         redirect_to root_path, notice: "Book #{@book.name} Published"
       else
          render "new"
       end
@@ -25,7 +25,7 @@ class BooksController < ApplicationController
    def destroy
       @book = Book.find(params[:id])
       @book.destroy
-      redirect_to root_path, notice:  "Книга #{@book.name} удалена"
+      redirect_to root_path, notice:  "Book #{@book.name} deleted"
    end
 
    def download_pdf
