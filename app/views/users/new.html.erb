@@ -1,27 +1,27 @@
 <% provide(:title, 'Sign up') %>
-
+<%= render 'shared/error_messages' %>
 <div class = "row">
 	<div class="col-xs-8">
 		<center>
-			<h1>Регестрация</h1>
-			
+			<h1>Registration</h1>
+
 			<%= form_for(@user) do |f| %>
 
-			<%= render 'shared/error_messages' %>
 
-			<%= f.text_field :name, placeholder: "Имя", class: "form-control input_new_user "%>
+
+			<%= f.text_field :name, placeholder: "Name", class: "form-control input_new_user "%>
 
 
 			<%= f.text_field :email, placeholder: "Email", class: "form-control input_new_user " %>
 
 
-			<%= f.password_field :password, placeholder: "Пароль", class: "form-control input_new_user"%>
+			<%= f.password_field :password, placeholder: "Pasword", class: "form-control input_new_user"%>
 
 
-			<%= f.password_field :password_confirmation, placeholder: "Повторите пароль", class: "form-control input_new_user"%>
+			<%= f.password_field :password_confirmation, placeholder: "Repeat password", class: "form-control input_new_user"%>
 
-			
-			<%= f.submit "Создать аккаунт", class: "btn btn-primary input_new_user"%>
+
+			<%= f.submit "Create account", class: "btn btn-primary input_new_user"%>
 			<% end %>
 
 		</center>

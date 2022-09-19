@@ -8,12 +8,12 @@
 	</div>
 	<div  class="col-xl-6">
 		<h1><%= @book.name %></h1>
-		<p>Страниц:<%= @book.page %></p>
-		<h3>Описание:</h3>
+		<h3>Pages <%= @book.page %></h3>
+		<h3>Description</h3>
 		<p><%= @book.desc %></p>
 
-		<%= link_to "Удалить", @book, method: :delete, class: "btn btn-primary", data: {confirm: "Are you sure?"} %>
- 		<%= link_to "Скачать", @book.attachment_url, class: "btn btn-primary"%>
+		<%= link_to "Delite", @book, method: :delete, class: "btn btn-primary", data: {confirm: "Are you sure?"} %>
+ 		<%= link_to "Download", @book.attachment_url, class: "btn btn-primary"%>
 	</div>
 
 </div>

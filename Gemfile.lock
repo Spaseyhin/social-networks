@@ -97,6 +97,7 @@ GEM
     crass (1.0.6)
     erubi (1.10.0)
     execjs (2.8.1)
+    ffaker (2.21.0)
     ffi (1.15.4)
     formatador (0.3.0)
     globalid (0.5.2)
@@ -276,6 +277,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   carrierwave
+  ffaker
   guard
   guard-minitest
   jbuilder (~> 2.7)
