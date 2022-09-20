@@ -23,6 +23,12 @@ Rails.application.routes.draw do
   get 'bshow/four'
   get 'bshow/five'
   get 'bshow/six'
+  get 'bshow/7'
+  get 'bshow/8'
+  get 'bshow/9'
+  get 'bshow/10'
+  get 'bshow/11'
+  get 'bshow/12'
 
 # рут для скачивания файлов
   get 'download_pdf', to: 'books#download_pdf'

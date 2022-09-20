@@ -1,33 +1,175 @@
 
-.igure {width: 100%;}
-
+.igure {
+    width: 100%;}
 
 .mar{
     margin-bottom: 5%;
     margin-top: 1%;
     margin-left: 2%;
-    margin-right: 2%;
+    margin-right: 2%;}
 
-}
+@mixin box_sizing {
+    -moz-box-sizing:
+    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:
+    border-box;}
 
-section {overflow: auto;}
+.debug_dump {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 45px;
+    @include box_sizing;}
 
-textarea {resize: vertical;}
+.input_new_pos {
+    margin-top: 1%;
+    width: 380px;}
 
-h1, h2, h3, h4, h5, h6 {line-height: 1;
-font-family: Arial Narrow;}
+.input_new_user {
+    margin-top: 1%;
+    width: 300px;}
 
+.input_edit{
+    width: 300px;}
+
+.mar_top{
+    margin-top: 7%;}
+.mar_left_avatar{
+    margin-left: 70%;}
+.mar_left_change_avatar{
+    margin-left: 15%;}
+.margin_right_set{
+    margin-left: 10%;}
+
+.colorlink{ color: #000000;}
+.colorlink:active{ color: #000000;}
+.colorlink:visited {color: #000000; /* Цвет посещенных ссылок */}
+
+.zagolovok {
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 4;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;}
+
+.login {
+    font-size: 70%}
+
+
+dropdown:hover {
+    background-color: green;}
+
+.dropdown.active, .dropdown-item:active {
+    background-color: green;}
+
+.img {
+    overflow:hidden;
+    display: block;}
+
+.descr{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.8);
+    color: #fff;
+    padding-top: 100px;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: all .25s;
+    -o-transition: all .25s;
+    transition: .25s;}
+
+.portfolio li:hover .descr {
+    opacity: 1;}
+
+.header {
+    margin-top: 2px;}
+
+.logo{
+    margin-top: 10px;}
+
+
+
+/* The alert message box */
+
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  }
+
+.ratio_image {
+  width: 200px;
+  height: 300px;
+  float: left;
+  margin: 5px;
+  position: relative;
+  overflow: hidden;}
+
+.ratio_image:before {
+  width: 100%;
+    display: block;
+    content: "";}
+
+.portfolio ul,
+.portfolio li {
+    margin: 0;
+    padding: 0;}
+
+.portfolio li {
+    display: inline-block;
+    position: relative;
+    width: 200px;}
+
+.p_mar{
+    margin-bottom: 10%;}
+
+
+ .custom-file-input-image::-webkit-file-upload-button {
+  visibility: hidden;}
+
+.custom-file-input-image::before {
+  content: 'Cover          ';}
+
+ .custom-file-input-file::-webkit-file-upload-button {
+  visibility: hidden;}
+
+.custom-file-input-file::before {
+  content: 'Book            ';}
+
+
+.checkbox-remember-me{
+    margin-top: 15px;}
 
 
 p {
     font-size: 1.1em;
     line-height: 1.7em;
-    font-family: Arial Narrow;
-}
+    font-family: Arial Narrow;}
 
-
-
-footer {
+    footer {
     margin-top: 400px;
     padding-top: 5px;
     border-top: 1px solid #eaeaea;
@@ -48,216 +190,24 @@ footer {
     }
 }
 
-@mixin box_sizing {
--moz-box-sizing:
-border-box;
--webkit-box-sizing: border-box;
-box-sizing:
-border-box;
-}
-/* разное */
-.debug_dump {
-clear: both;
-float: left;
-width: 100%;
-margin-top: 45px;
-@include box_sizing;
-}
-
-
-.input_new_pos {
-    margin-top: 1%;
-    width: 380px;
-}
-.input_new_user {
-    margin-top: 1%;
-    width: 300px;
-}
 
 html {
-  overflow-x: hidden;
-  margin-right: calc(-1 * (100vw - 100%));
-}
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));}
+
 li {
-    list-style-type: none; /* Убираем маркеры */
-   }
-
-.input_edit{
-    width: 300px;
-}
-
-.mar_top{
-    margin-top: 7%;
-}
-.mar_left_avatar{
-    margin-left: 70%;
-}
-.mar_left_change_avatar{
-    margin-left: 15%;
-}
-.margin_right_set{
-    margin-left: 10%;
-}
-   body {
-    background: #f5f5f5; /* Цвет фона */
-
-   }
-   
-.colorlink{ color: #000000;}
-.colorlink:active{ color: #000000;}
-.colorlink:visited {color: #000000; /* Цвет посещенных ссылок */}
-
-.zagolovok {
--ms-text-overflow: ellipsis;
-text-overflow: ellipsis;
-overflow: hidden;
--ms-line-clamp: 4;
--webkit-line-clamp: 4;
-line-clamp: 4;
-display: -webkit-box;
-display: box;
-word-wrap: break-word;
--webkit-box-orient: vertical;
-
-}
-.login {
-    font-size: 70%
-}
-
-
-dropdown:hover {
-background-color: green;
-}
-
-.dropdown.active, .dropdown-item:active {
-background-color: green;
-}
-
-
-.img {
-    overflow:hidden;
-    display: block;
-}
-.descr{
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,.5);
-    color: #fff;
-    padding-top: 100px;
-    text-align: center;
-    opacity: 0;
-    -webkit-transition: all .25s;
-    -o-transition: all .25s;
-    transition: .25s;
-}
-
-
-
-.portfolio li:hover .descr {
-    opacity: 1;
-}
-
-.header {
-    margin-top: 2px;
-}
-.logo{
-    margin-top: 10px;   
-}
-
-
-/* The alert message box */
-
-
-/* The close button */
-.closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-/* When moving the mouse over the close button */
-.closebtn:hover {
-    color: black;
-}
-
-body {overflow-y: scroll}
-
-.img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  
-}
-
-
-
-.ratio_image {
-  width: 200px;
-  height: 300px;
-  float: left;
-
-  margin: 5px;
-  position: relative;
-  overflow: hidden;
-}
-
-.ratio_image:before {
-  width: 100%;
-    display: block;
-    content: "";
-}
-
-
-
-
-.portfolio ul,
-.portfolio li {
-    margin: 0;
-    padding: 0;
-
-}
-.portfolio li {
-    display: inline-block;
-    position: relative;
-    width: 200px;
-}
+    list-style-type: none; /* Убираем маркеры */}
 
 body{
+    overflow-y: scroll;
     overflow:hidden;
-overflow-y:hidden;  /*для вертикального*/
-overflow-x:hidden;  /*для горизонтального*/
-}
+    background: #F2F2F2; /* Цвет фона */
+    overflow-y:hidden;  /*для вертикального*/
+    overflow-x:hidden;  /*для горизонтального*/}
 
-.p_mar{
-    margin-bottom: 10%;
-}
+h1, h2, h3, h4, h5, h6 {line-height: 1;
+font-family: Arial Narrow;}
 
+section {overflow: auto;}
 
- .custom-file-input-image::-webkit-file-upload-button {
-  visibility: hidden;
-}
-.custom-file-input-image::before {
-  content: 'Cover          ';
-
-}
-
-
- .custom-file-input-file::-webkit-file-upload-button {
-  visibility: hidden;
-}
-.custom-file-input-file::before {
-  content: 'Book            ';
-
-}
-
-
-.checkbox-remember-me{
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
+textarea {resize: vertical;}

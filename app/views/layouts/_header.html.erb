@@ -38,8 +38,9 @@
             </div>
           </div>
 
+<li><%= link_to "Logout", logout_path, method: "delete", class: 'nav-link', style: 'color: #000000;font-family: Arial Narrow;'%></li>
 
-          <li class="nav-item dropdown">
+          <!-- <li class="nav-item dropdown">
 
           <a class="btn header"  id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
@@ -53,14 +54,14 @@
           <ul class="dropdown-menu dropdown-menu " >
             <li><%= link_to "Edit profil", edit_user_path(current_user), class: 'nav-link', style: 'color: #000000;font-family: Arial Narrow;' %></li>
             <li><%= link_to "Profil", current_user, class: 'nav-link', style: 'color: #000000;font-family: Arial Narrow;'%></li>
-            <li><%= link_to "Logout", logout_path, method: "delete", class: 'nav-link', style: 'color: #000000;font-family: Arial Narrow;'%></li>
+            
 
 
             
           </ul>
         </li>
 
-
+ -->
         <% else %>
           <!-- Кнопка-триггер модального окна -->
           <button class="nav-link" style="color: black;;font-family: Arial Narrow; " data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -92,7 +93,7 @@
 
 
 
-          <%= link_to "Register", signup_path,  class: 'nav-link header', style: 'color: #000000;font-family: Arial Narrow;'%>
+          
           <%= link_to "Login", login_path, class: 'nav-link header', style: 'color: #000000;font-family: Arial Narrow;'%>
 
 
